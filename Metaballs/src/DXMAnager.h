@@ -33,11 +33,10 @@ private:
 	bool InitAlphaBlending();
 	bool InitZBuffer();
 
-
 private:
 	bool m_vsync_enabled;
 	int m_videoCardMemmory;
-	std::string m_videoCardDesc;
+	char m_videoCardDesc[128];
 	std::unique_ptr<IDXGISwapChain>				m_swapChain;
 	std::unique_ptr<ID3D11Device>				m_device;
 	std::unique_ptr<ID3D11DeviceContext>		m_deviceContext;
